@@ -1,0 +1,27 @@
+<html>
+<head>
+ <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+ <title>南通中学卫生管理系统</title>
+</head>
+<body>
+ {% if message %}
+ <p style='font-size:20px;color:blue'>{{message}}</p>
+ {% else %}
+ <p style='font-size:20px;color:blue'>欢迎，{{username}}</p>
+ {% endif %}
+ <br />
+ <form action="/home/{{username}}" method="post" enctype='multipart/form-data'>
+  <p><input name='classes' placeholder='违规班级' style='font-size:20px' value='{{classes}}'></p>
+  <p><input name='cause' placeholder='违规原因' style='font-size:20px' value='{{cause}}'></p>
+  <p style='font-size:20px'>上传图片(4MB以内,支持gif,jpg,jpeg,png格式,建议使用jpg格式)</p>
+  <p><input type='file' name='picture'></p>
+  <p><button type="submit" style='font-size:20px'>提交</button></p>
+ </form>
+ <br />
+ <a href="/show" target="_blank">查询已提交数据</a>
+ <br />
+ <br />
+ <br />
+ <p><font size="1" color="gray">**2018南通中学极客共进交流社**</font></p>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html>
+<head>
+ <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+ <title>南通中学卫生管理系统-查询</title>
+</head>
+<body>
+ <table border='1' cellpadding='5'>
+ <tr>
+  <th>记录者</th>
+  <th>违规班级</th>
+  <th>违规事项</th>
+  <th>时间</th>
+  <th>图片</th>
+ </tr>
+ {%for x in range(i-1)%}
+ <tr>
+  <td>{{names[x]}}</td>
+  <td>{{classes[x]}}</td>
+  <td>{{causes[x]}}</td>
+  <td>{{dates[x]}}</td>
+  <td><a href='{{pictures[x]}}' target='_blank'>点击查看图片</td>
+ </tr>
+ {%endfor%}
+ </table>
+ <br />
+ <br />
+ <br />
+ <p><font size="1" color="gray">**2018南通中学极客共进交流社**</font></p>
+</body>
+</html>
